@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>QB-MINIGAMES</title>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/quiz.css" />
+        <link rel="stylesheet" href="css/wordguess.css" />
+        <link rel="stylesheet" href="css/wordscramble.css" />
+        <script src="js/quiz.js" defer></script>
+        <script src="js/wordguess.js" defer></script>
+        <script src="js/wordscramble.js" defer></script>
+    </head>
+    <body>
+        <!-- Word Scramble Game HTML -->
+        <div class="scramble-container">
+            <h2>Word Scramble</h2>
+            <div class="scramble-content">
+                <p class="word"></p>
+                <div class="details">
+                    <p class="hint">Hint: <span></span></p>
+                    <p class="time">
+                        Time Left: <span><b>30</b>s</span>
+                    </p>
+                </div>
+                <input type="text" spellcheck="false" placeholder="Enter a valid word" />
+                <div class="buttons">
+                    <button class="check-word">Check Word</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Guess the Word Game HTML -->
+        <div class="guess-container">
+            <h1>Guess the Word</h1>
+            <div class="guess-content">
+                <input type="text" class="typing-input" maxlength="1" />
+                <div class="inputs"></div>
+                <div class="details">
+                    <p class="guess-hint">Hint: <span></span></p>
+                    <p class="guess-left">Remaining guesses: <span></span></p>
+                    <p class="wrong-letter">Wrong letters: <span></span></p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Quiz Game HTML -->
+        <div class="quiz-container">
+            <div class="start_btn"><button>Start Quiz</button></div>
+            <div class="info_box">
+                <div class="info-title"><span>Quiz Rules:</span></div>
+                <div class="info-list">
+                    <div class="info">1. You will have only <span>15 seconds</span> per each question.</div>
+                    <div class="info">2. Once you select your answer, it can't be undone.</div>
+                    <div class="info">3. You can't select any option once time goes off.</div>
+                    <div class="info">4. You'll get points on the basis of your correct answers.</div>
+                </div>
+                <div class="buttons">
+                    <button class="quit">Exit Quiz</button>
+                    <button class="restart">Continue</button>
+                </div>
+            </div>
+            <div class="quiz_box">
+                <header>
+                    <div class="title">Quiz Application</div>
+                    <div class="timer">
+                        <div class="time_left_txt">Time Left</div>
+                        <div class="timer_sec">15</div>
+                    </div>
+                    <div class="time_line"></div>
+                </header>
+                <section>
+                    <div class="que_text"></div>
+                    <div class="option_list"></div>
+                </section>
+                <footer>
+                    <div class="total_que"></div>
+                    <button class="next_btn">Next Que</button>
+                </footer>
+            </div>
+            <div class="result_box">
+                <div class="icon">
+                    <i class="fas fa-crown"></i>
+                </div>
+                <div class="complete_text">You've completed the Quiz!</div>
+                <div class="score_text"></div>
+                <div class="buttons">
+                    <button class="quit">Quit Quiz</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
