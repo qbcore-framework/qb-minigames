@@ -5,7 +5,7 @@ I plan on doing the rest
 
 ## Quiz
 ```lua
-  local success = exports['qb-minigames]:Quiz(
+  local success = exports['qb-minigames']:Quiz(
         { question = 'What color is a peach?', answer = 'fivem', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is an apple?', answer = 'red', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is an orange?', answer = 'orange', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
@@ -19,12 +19,12 @@ I plan on doing the rest
 
 ## Word Guess
 ```lua
-  local success = exports['qb-minigames]:WordGuess('fivem', 'the game modification you are playing on', 5) <- how long they have to guess in seconds
+  local success = exports['qb-minigames']:WordGuess('fivem', 'the game modification you are playing on', 5) <- how long they have to guess in seconds
   if success then print('success') else print('fail') end
 ```
 
 ## Word Scramble
 ```lua
-  local success = exports['qb-minigames]:WordScramble('fivem', 'the game modification you are playing on', 30) <- how long they have to unscramble in seconds
+  local success = exports['qb-minigames']:WordScramble('fivem', 'the game modification you are playing on', 30) <- how long they have to unscramble in seconds
   if success then print('success') else print('fail') end
 ```
