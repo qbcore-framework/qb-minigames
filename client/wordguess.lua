@@ -7,7 +7,7 @@ local function CloseGame()
 end
 
 RegisterNUICallback('wordGuessedCorrectly', function(_, cb)
-    TriggerEvent('QBCore:Notify', 'Guessed correctly!', 'success', 2500)
+    if not wordGuess then return cb('ok') end
     SetNuiFocus(false, false)
     wordGuess:resolve(true)
     wordGuess = nil
@@ -16,7 +16,7 @@ RegisterNUICallback('wordGuessedCorrectly', function(_, cb)
 end)
 
 RegisterNUICallback('tooManyGuesses', function(_, cb)
-    TriggerEvent('QBCore:Notify', 'Too many guesses!', 'error', 2500)
+    if not wordGuess then return cb('ok') end
     SetNuiFocus(false, false)
     wordGuess:resolve(false)
     wordGuess = nil
@@ -25,11 +25,10 @@ RegisterNUICallback('tooManyGuesses', function(_, cb)
 end)
 
 RegisterNUICallback('closeWordGuess', function(_, cb)
+    if not wordGuess then return cb('ok') end
     SetNuiFocus(false, false)
-    if wordGuess then
-        wordGuess:resolve(false)
-        wordGuess = nil
-    end
+    wordGuess:resolve(false)
+    wordGuess = nil
     cb('ok')
 end)
 

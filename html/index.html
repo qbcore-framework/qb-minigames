@@ -15,6 +15,7 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="css/keyminigame.css" />
+        <link rel="stylesheet" href="css/lockpick.css" />
         <!-- <link rel="stylesheet" href="css/memorygame.css" /> -->
         <link rel="stylesheet" href="css/quiz.css" />
         <!-- <link rel="stylesheet" href="css/rockpaperscissor.css" /> -->
@@ -22,6 +23,7 @@
         <link rel="stylesheet" href="css/wordguess.css" />
         <link rel="stylesheet" href="css/wordscramble.css" />
         <script src="js/keyminigame.js" defer></script>
+        <script src="js/lockpick.js" defer></script>
         <!-- <script src="js/memorygame.js" defer></script> -->
         <script src="js/quiz.js" defer></script>
         <!-- <script src="js/rockpaperscissor.js" defer></script> -->
@@ -115,6 +117,17 @@
                 <div class="key" data-key="arrowleft">&larr;</div>
                 <div class="key" data-key="arrowdown">&darr;</div>
                 <div class="key" data-key="arrowright">&rarr;</div>
+            </div>
+        </div>
+
+        <!-- Lockpick HTML -->
+        <div id="lockpick-container">
+            <img id="collar" />
+            <div id="cylinder"></div>
+            <div id="driver"></div>
+            <div id="pin">
+                <div class="top"></div>
+                <div class="bott"></div>
             </div>
         </div>
     </body>

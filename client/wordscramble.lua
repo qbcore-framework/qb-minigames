@@ -7,11 +7,13 @@ local function CloseGame()
 end
 
 RegisterNUICallback('scrambleIncorrect', function(_, cb)
+    if not wordScramble then return cb('ok') end
     TriggerEvent('QBCore:Notify', 'Incorrect word', 'error', 2500)
     cb('ok')
 end)
 
 RegisterNUICallback('scrambleCorrect', function(_, cb)
+    if not wordScramble then return cb('ok') end
     TriggerEvent('QBCore:Notify', 'Guessed correctly!', 'success', 2500)
     SetNuiFocus(false, false)
     wordScramble:resolve(true)
@@ -21,6 +23,7 @@ RegisterNUICallback('scrambleCorrect', function(_, cb)
 end)
 
 RegisterNUICallback('scrambleTimeOut', function(_, cb)
+    if not wordScramble then return cb('ok') end
     SetNuiFocus(false, false)
     wordScramble:resolve(false)
     wordScramble = nil
@@ -29,11 +32,10 @@ RegisterNUICallback('scrambleTimeOut', function(_, cb)
 end)
 
 RegisterNUICallback('closeScramble', function(_, cb)
+    if not wordScramble then return cb('ok') end
     SetNuiFocus(false, false)
-    if wordScramble then
-        wordScramble:resolve(false)
-        wordScramble = nil
-    end
+    wordScramble:resolve(false)
+    wordScramble = nil
     CloseGame()
     cb('ok')
 end)

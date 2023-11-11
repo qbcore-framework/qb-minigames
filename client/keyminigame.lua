@@ -1,6 +1,7 @@
 local keyminigame
 
 RegisterNuiCallback('keyminigameExit', function(_, cb)
+    if not keyminigame then return cb('ok') end
     SetNuiFocus(false, false)
     keyminigame:resolve({ quit = true, faults = 0 })
     keyminigame = nil
@@ -8,6 +9,7 @@ RegisterNuiCallback('keyminigameExit', function(_, cb)
 end)
 
 RegisterNuiCallback('keyminigameFinish', function(data, cb)
+    if not keyminigame then return cb('ok') end
     SetNuiFocus(false, false)
     keyminigame:resolve({ quit = false, faults = data.faults })
     keyminigame = nil

@@ -2,6 +2,7 @@ local quiz
 local required = 0
 
 RegisterNUICallback('exitQuiz', function(_, cb)
+    if not quiz then return cb('ok') end
     SetNuiFocus(false, false)
     quiz:resolve(false)
     quiz = nil
@@ -10,11 +11,10 @@ RegisterNUICallback('exitQuiz', function(_, cb)
 end)
 
 RegisterNUICallback('quitQuiz', function(data, cb)
+    if not quiz then return cb('ok') end
     if data.score >= required then
-        TriggerEvent('QBCore:Notify', 'You have passed the quiz!', 'success')
         quiz:resolve(true)
     else
-        TriggerEvent('QBCore:Notify', 'You have failed the quiz!', 'error')
         quiz:resolve(false)
     end
     SetNuiFocus(false, false)

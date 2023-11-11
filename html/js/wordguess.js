@@ -13,7 +13,7 @@ let word,
 const setupWordGuessGame = (receivedWord, receivedHint, maxAllowedGuesses) => {
     word = receivedWord.toLowerCase();
     maxGuesses = maxAllowedGuesses;
-    correctLetters = Array(word.length).fill(""); // Initialize correct letters with empty strings
+    correctLetters = Array(word.length).fill("");
     incorrectLetters = [];
 
     hintTag.textContent = receivedHint;
@@ -73,7 +73,7 @@ const revealWord = () => {
 };
 
 const resetGuessGame = () => {
-    setupWordGuessGame("", "", 0); // Reset the game state
+    setupWordGuessGame("", "", 0);
     typingInput.value = "";
     guessContainer.style.display = "none";
 };

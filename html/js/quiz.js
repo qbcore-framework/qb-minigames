@@ -153,8 +153,8 @@ start_btn.onclick = () => {
 };
 
 continue_btn.onclick = () => {
-    info_box.style.display = "none"; // Hide info box
-    quiz_box.style.display = "flex"; // Show quiz box
+    info_box.style.display = "none";
+    quiz_box.style.display = "flex";
     setupQuizGame(questions, timeValue);
 };
 
