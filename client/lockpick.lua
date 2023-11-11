@@ -27,8 +27,3 @@ local function Lockpick(pins)
     return Citizen.Await(lockpick)
 end
 exports('Lockpick', Lockpick)
-
-RegisterCommand('lockpick', function()
-    local success = Lockpick(5)
-    print('Lockpick success:', success)
-end, false)
