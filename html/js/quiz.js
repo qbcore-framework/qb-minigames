@@ -21,8 +21,8 @@ let timeValue = 15,
     counterLine,
     widthValue = 0,
     questions = [],
-    tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>',
-    crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>';
+    quizStarted = false;
+(tickIconTag = '<div class="icon tick"><i class="fas fa-check"></i></div>'), (crossIconTag = '<div class="icon cross"><i class="fas fa-times"></i></div>');
 
 const showResult = () => {
     quiz_box.style.display = "none";
@@ -144,6 +144,7 @@ const resetQuizUI = () => {
     info_box.style.display = "none";
     quiz_box.style.display = "none";
     result_box.style.display = "none";
+    quizStarted = false;
 };
 
 start_btn.onclick = () => {
@@ -195,6 +196,7 @@ next_btn.onclick = () => {
 };
 
 document.addEventListener("keydown", (event) => {
+    if (!quizStarted) return;
     if (event.key === "Escape") {
         fetch(`https://${GetParentResourceName()}/closeQuiz`, {
             method: "POST",
@@ -211,5 +213,6 @@ window.addEventListener("message", (event) => {
         questions = data.questions;
         quizContainer.style.display = "flex";
         start_btn.parentElement.style.display = "flex";
+        quizStarted = true;
     }
 });

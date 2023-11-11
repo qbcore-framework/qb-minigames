@@ -13,7 +13,9 @@
             }
         </style>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap" />
+        <link href="https://fonts.googleapis.com/css?family=Source Code Pro" rel="stylesheet" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/hacking.css" />
         <link rel="stylesheet" href="css/keyminigame.css" />
         <link rel="stylesheet" href="css/lockpick.css" />
         <!-- <link rel="stylesheet" href="css/memorygame.css" /> -->
@@ -22,6 +24,7 @@
         <!-- <link rel="stylesheet" href="css/tictactoe.css" /> -->
         <link rel="stylesheet" href="css/wordguess.css" />
         <link rel="stylesheet" href="css/wordscramble.css" />
+        <script src="js/hacking.js" defer></script>
         <script src="js/keyminigame.js" defer></script>
         <script src="js/lockpick.js" defer></script>
         <!-- <script src="js/memorygame.js" defer></script> -->
@@ -128,6 +131,19 @@
             <div id="pin">
                 <div class="top"></div>
                 <div class="bott"></div>
+            </div>
+        </div>
+
+        <!-- Hacking HTML -->
+        <div class="hacking-container">
+            <audio id="audiocorrect" src="sounds/correct.ogg"></audio>
+            <audio id="audiowrong" src="sounds/wrong.ogg"></audio>
+            <audio id="audiobeep" src="sounds/beep.ogg"></audio>
+            <audio id="audiostart" src="sounds/start.ogg"></audio>
+            <audio id="audiofail" src="sounds/fail.ogg"></audio>
+            <audio id="audiofinish" src="sounds/finish.ogg"></audio>
+            <div id="game">
+                <div id="infobox"></div>
             </div>
         </div>
     </body>

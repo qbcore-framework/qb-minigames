@@ -12,4 +12,6 @@ files {
     'html/index.html',
     'html/css/*.css',
     'html/js/*.js',
+    'html/sounds/*.ogg',
+    'html/images/*.png',
 }

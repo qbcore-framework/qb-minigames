@@ -5,33 +5,33 @@ I plan on doing the rest
 
 ## Quiz
 ```lua
-  local success = exports['qb-minigames']:Quiz(
-        { question = 'What color is a peach?', answer = 'fivem', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
+  local success = exports['qb-minigames']:Quiz({
+        { question = 'What color is a peach?', answer = 'pink', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is an apple?', answer = 'red', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is an orange?', answer = 'orange', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is a banana?', answer = 'yellow', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is a strawberry?', answer = 'red', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is a blueberry?', answer = 'blue', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
-    }, 3, 15) <- required amount of correct answers & amount of time they have to answer each question
+    }, 3, 15) -- required amount of correct answers & amount of time in seconds they have to answer each question
 
   if success then print('success') else print('fail') end
 ```
 
 ## Word Guess
 ```lua
-  local success = exports['qb-minigames']:WordGuess('fivem', 'the game modification you are playing on', 5) <- how long they have to guess in seconds
+  local success = exports['qb-minigames']:WordGuess('fivem', 'the game modification you are playing on', 5) -- how long they have to guess in seconds
   if success then print('success') else print('fail') end
 ```
 
 ## Word Scramble
 ```lua
-  local success = exports['qb-minigames']:WordScramble('fivem', 'the game modification you are playing on', 30) <- how long they have to unscramble in seconds
+  local success = exports['qb-minigames']:WordScramble('fivem', 'the game modification you are playing on', 30) -- how long they have to unscramble in seconds
   if success then print('success') else print('fail') end
 ```
 
 ## Key Minigame
 ```lua
-  local result = exports['qb-minigames']:KeyMinigame(10) <- amount of presses they need to do
+  local result = exports['qb-minigames']:KeyMinigame(10) -- amount of presses they need to do
     -- Returns if user quit game
   if result.quit then print('User quit game early') return end
     -- Returns how many times user pressed wrong key
@@ -40,6 +40,12 @@ I plan on doing the rest
 
 ## Lockpick
 ```lua
-  local success = exports['qb-minigames']:Lockpick(5) <- number of tries
+  local success = exports['qb-minigames']:Lockpick(5) -- number of tries
+  if success then print('success') else print('fail') end
+```
+
+## Hacking
+```lua
+  local success = exports['qb-minigames']:Hacking(5, 30) -- code block size & seconds to solve
   if success then print('success') else print('fail') end
 ```
