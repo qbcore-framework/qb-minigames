@@ -12,7 +12,7 @@ I plan on doing the rest
         { question = 'What color is a banana?', answer = 'yellow', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is a strawberry?', answer = 'red', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
         { question = 'What color is a blueberry?', answer = 'blue', options = { 'red', 'yellow', 'orange', 'blue', 'pink' } },
-    }, 3, 15)) <- required amount of correct answers & amount of time they have to answer each question
+    }, 3, 15) <- required amount of correct answers & amount of time they have to answer each question
 
   if success then print('success') else print('fail') end
 ```
@@ -27,4 +27,12 @@ I plan on doing the rest
 ```lua
   local success = exports['qb-minigames']:WordScramble('fivem', 'the game modification you are playing on', 30) <- how long they have to unscramble in seconds
   if success then print('success') else print('fail') end
+```
+## Key Minigame
+```lua
+  local result = exports['qb-minigames']:KeyMinigame(10) <- amount of presses they need to do
+    -- Returns if user quit game
+  if result.quit then print('User quit game early') return end
+    -- Returns how many times user pressed wrong key
+  if result.faults > 3 then print('User got more than 3 keys wrong') end
 ```
