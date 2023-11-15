@@ -19,7 +19,7 @@ I plan on doing the rest
 
 ## Word Guess
 ```lua
-  local success = exports['qb-minigames']:WordGuess('fivem', 'the game modification you are playing on', 5) -- how long they have to guess in seconds
+  local success = exports['qb-minigames']:WordGuess('fivem', 'the game modification you are playing on', 5) -- how many wrong guesses allowed
   if success then print('success') else print('fail') end
 ```
 
@@ -47,5 +47,17 @@ I plan on doing the rest
 ## Hacking
 ```lua
   local success = exports['qb-minigames']:Hacking(5, 30) -- code block size & seconds to solve
+  if success then print('success') else print('fail') end
+```
+
+## Skillbar
+```lua
+  local success = exports['qb-minigames']:Skillbar() -- calling like this will use default easy difficulty with 1234
+  if success then print('success') else print('fail') end
+
+  local success = exports['qb-minigames']:Skillbar('medium') -- calling like this will just change difficulty and still use 1234
+  if success then print('success') else print('fail') end
+
+  local success = exports['qb-minigames']:Skillbar('easy', 'wasdfgh') -- calling like this will set difficulty and keys to press
   if success then print('success') else print('fail') end
 ```
