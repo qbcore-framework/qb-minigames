@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="css/hacking.css" />
         <link rel="stylesheet" href="css/keyminigame.css" />
         <link rel="stylesheet" href="css/lockpick.css" />
+        <link rel="stylesheet" href="css/pinpad.css" />
         <!-- <link rel="stylesheet" href="css/memorygame.css" /> -->
         <link rel="stylesheet" href="css/quiz.css" />
         <!-- <link rel="stylesheet" href="css/rockpaperscissor.css" /> -->
@@ -28,6 +29,7 @@
         <script src="js/hacking.js" defer></script>
         <script src="js/keyminigame.js" defer></script>
         <script src="js/lockpick.js" defer></script>
+        <script src="js/pinpad.js" defer></script>
         <!-- <script src="js/memorygame.js" defer></script> -->
         <script src="js/quiz.js" defer></script>
         <!-- <script src="js/rockpaperscissor.js" defer></script> -->
@@ -151,5 +153,22 @@
 
         <!-- Skillbar HTML -->
         <canvas id="skillbar" height="300" width="300"></canvas>
+
+        <!-- pinpad HTML -->
+        <div class="pinpad-container">
+            <input type="text" id="PINbox" readonly />
+            <div id="PINcode">
+                <button class="PINbutton" value="1">1</button>
+                <button class="PINbutton" value="2">2</button>
+                <button class="PINbutton" value="3">3</button>
+                <button class="PINbutton" value="4">4</button>
+                <button class="PINbutton" value="5">5</button>
+                <button class="PINbutton" value="6">6</button>
+                <button class="PINbutton" value="7">7</button>
+                <button class="PINbutton" value="8">8</button>
+                <button class="PINbutton" value="9">9</button>
+                <button class="PINbutton clear-button" id="clearButton">Clear</button>
+            </div>
+        </div>
     </body>
 </html>

@@ -61,3 +61,11 @@ I plan on doing the rest
   local success = exports['qb-minigames']:Skillbar('easy', 'wasdfgh') -- calling like this will set difficulty and keys to press
   if success then print('success') else print('fail') end
 ```
+
+## Pinpad
+```lua
+  local result = exports['qb-minigames']:StartPinpad({1,2,3,4}) -- numbers available to use are 1-9
+  if result.quit then print('User quit game early') end
+  if not result.correct then print('User failed game') end
+  if result.correct then print('User passed game') end
+```
