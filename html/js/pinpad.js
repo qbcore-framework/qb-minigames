@@ -4,8 +4,8 @@ const pinContainer = document.querySelector(".pinpad-container"),
 let pinValue = "";
 let correctSequence = [];
 
-const openPinpad = (correctNumbers) => {
-    correctSequence = correctNumbers;
+const openPinpad = (pinNumber) => {
+    correctSequence = pinNumber.split("");
     pinBox.value = "";
     pinValue = "";
     pinContainer.style.display = "block";
@@ -90,6 +90,8 @@ document.addEventListener("keydown", function (event) {
 
 window.addEventListener("message", (event) => {
     if (event.data.action === "openPinpad") {
-        openPinpad(event.data.numbers);
+        const pinNumber = event.data.numbers;
+        const pinAsString = pinNumber.toString();
+        openPinpad(pinAsString);
     }
 });

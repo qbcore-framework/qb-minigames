@@ -64,7 +64,7 @@ I plan on doing the rest
 
 ## Pinpad
 ```lua
-  local result = exports['qb-minigames']:StartPinpad({1,2,3,4}) -- numbers available to use are 1-9
+  local result = exports['qb-minigames']:StartPinpad(1234) -- numbers available to use are 1-9
   if result.quit then print('User quit game early') end
   if not result.correct then print('User failed game') end
   if result.correct then print('User passed game') end
